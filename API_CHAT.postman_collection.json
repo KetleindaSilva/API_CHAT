@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "8ca9ab49-0364-45e7-b917-1f6b8cc76a39",
+		"name": "API_CHAT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24678000"
+	},
+	"item": [
+		{
+			"name": "Usuários",
+			"item": [
+				{
+					"name": "Entrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nick\":\"Bob\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/entrar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"entrar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Entrar",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nick\":\"Bob\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/entrar",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"entrar"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"status\" : 200,\r\n    \"resp\" : {\r\n        \"token\" : \" hfhghhghghhghhghghhghghghh\",\r\n        \"idUser\" : 3\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mensagens",
+			"item": [
+				{
+					"name": "Mensagem",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "idUser",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "idSala",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"msg\": \"Oiiiii\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/mensagem",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mensagem"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Mensagem",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "kkkkkk",
+										"type": "text"
+									},
+									{
+										"key": "idUser",
+										"value": "3",
+										"type": "text"
+									},
+									{
+										"key": "idSala",
+										"value": "4",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"msg\":\"Oiiiii\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/mensagem?timestamp=12/04/23",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"mensagem"
+									],
+									"query": [
+										{
+											"key": "timestamp",
+											"value": "12/04/23"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"status\": 200,\r\n        \"idUser\": 3,\r\n        \"timestamp\": \"12/04/23\",\r\n        \"idSala\": 4\r\n    \r\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Salas",
+			"item": [
+				{
+					"name": "Listar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "kkkkkk",
+								"type": "text"
+							},
+							{
+								"key": "nick",
+								"value": "Bob",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/sala/listar",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sala",
+								"listar"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "kkkkkkkkk",
+										"type": "text"
+									},
+									{
+										"key": "nick",
+										"value": "Bob",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/sala/listar?token=kkkkkk&nick=Bob",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"sala",
+										"listar"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "kkkkkk"
+										},
+										{
+											"key": "nick",
+											"value": "Bob"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"status\": 200,\r\n    \"msg\": \"ok\",\r\n    \"resp\":{\r\n        {\"idSala\": 1, \"sala\":\"vingadores do Java\"},\r\n        {\"idSala\": 2, \"sala\":\"renegadores do Twitter\"},\r\n        {\"idSala\": 3, \"sala\":\"Só quero reclamar\"},\r\n        {\"idSala\": 4, \"sala\":\"Genios da Info\"},\r\n        {\"idSala\": 5, \"sala\":\"Defensores do Javascript\"},\r\n    }\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Entrar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/sala/entrar?idSala=3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"sala",
+								"entrar"
+							],
+							"query": [
+								{
+									"key": "idSala",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Entrar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/sala/entrar?idSala=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"sala",
+										"entrar"
+									],
+									"query": [
+										{
+											"key": "idSala",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"status\":200,\r\n    \"msg\":\"OK\",\r\n    \"resp\":{\r\n        \"idSala\": 2,\r\n        \"nome\":\"Só quero Reclamar\"\r\n    }\r\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
