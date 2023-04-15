@@ -185,6 +185,93 @@
 							"body": "{\r\n    \"status\": 200,\r\n        \"idUser\": 3,\r\n        \"timestamp\": \"12/04/23\",\r\n        \"idSala\": 4\r\n    \r\n}"
 						}
 					]
+				},
+				{
+					"name": "ListaMensagem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/listagem?timestamp=3&idUser=3&idSala=4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"listagem"
+							],
+							"query": [
+								{
+									"key": "timestamp",
+									"value": "3"
+								},
+								{
+									"key": "idUser",
+									"value": "3"
+								},
+								{
+									"key": "idSala",
+									"value": "4"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "ListaMensagem",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "kkkkkk",
+										"type": "text"
+									},
+									{
+										"key": "idUser",
+										"value": "3",
+										"type": "text"
+									},
+									{
+										"key": "idSala",
+										"value": "4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/listagem?timestamp=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"listagem"
+									],
+									"query": [
+										{
+											"key": "timestamp",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"status\":200,\r\n    \"timestamp\":3,\r\n    \"resp\"{\r\n        \"token\":\"kkkkkk\",\r\n        \"idUser\":3,\r\n        \"idSala\":4\r\n    }\r\n}"
+						}
+					]
 				}
 			]
 		},
